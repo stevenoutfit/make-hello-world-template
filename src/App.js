@@ -4,9 +4,11 @@ import Shapes from './components/shapes/shapes'
 import Logos from './components/logos/logos'
 import {ReactComponent as MakeLogo} from './logo.svg'
 import {ReactComponent as ReactLogo} from './react-logo.svg'
+import { Fragment } from "react";
 
 function App({ headline, showLogo, backgroundImage }) {
   return (
+    <Fragment>
     <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
       {showLogo && (
         <Logos logoOne={<MakeLogo />} logoTwo={<ReactLogo />} />
@@ -18,6 +20,18 @@ function App({ headline, showLogo, backgroundImage }) {
         <Shapes />
       </div>
     </div>
+    <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
+      {showLogo && (
+        <Logos logoOne={<MakeLogo />} logoTwo={<ReactLogo />} />
+      )}
+
+      <h1>{headline}</h1>
+
+      <div className="shape-container">
+        <Shapes />
+      </div>
+    </div>
+  </Fragment>
   );
 }
 
@@ -28,7 +42,7 @@ App.propTypes = {
 }
 
 App.defaultProps = {
-  headline: 'Hello World',
+  headline: 'I am a cool World',
   showLogo: true,
   backgroundImage: '',
 }
