@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import './App.css';
 import Shapes from './components/shapes/shapes'
 import Logos from './components/logos/logos'
@@ -20,6 +21,11 @@ function App({ headline, showLogo, backgroundImage }) {
   );
 }
 
+App.propTypes = {
+  headline: PropTypes.string,
+  showLogo: PropTypes.bool,
+  backgroundImage: PropTypes.string,
+}
 
 App.defaultProps = {
   headline: 'I am a cool World',
