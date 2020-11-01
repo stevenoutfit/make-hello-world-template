@@ -7,7 +7,6 @@ import {ReactComponent as ReactLogo} from './react-logo.svg'
 
 function App({ headline, showLogo, backgroundImage }) {
 
-
   return (
     <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
       {showLogo && (
