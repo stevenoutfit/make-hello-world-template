@@ -7,7 +7,6 @@ import {ReactComponent as ReactLogo} from './react-logo.svg'
 
 function App({ headline, showLogo, backgroundImage }) {
 
-  const headlineCheck = JSON.parse(headline);
 
   return (
     <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
@@ -15,7 +14,6 @@ function App({ headline, showLogo, backgroundImage }) {
         <Logos logoOne={<MakeLogo />} logoTwo={<ReactLogo />} />
       )}
 
-      {headlineCheck ? <h1>{headline}</h1> : <h1>"I am Steveee's world"</h1>}
       <h1>{headline}</h1>
 
       <div className="shape-container">
@@ -29,6 +27,12 @@ App.propTypes = {
   headline: PropTypes.string,
   showLogo: PropTypes.bool,
   backgroundImage: PropTypes.string,
+}
+
+App.defaultProps = {
+  headline: 'I am a cool World',
+  showLogo: true,
+  backgroundImage: '',
 }
 
 export default App;
