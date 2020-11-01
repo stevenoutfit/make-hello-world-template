@@ -6,7 +6,6 @@ import 'typeface-ibm-plex-sans';
 ReactDOM.render(
   <React.StrictMode>
   <Fragment>
-    <App {...window.templateProps} />
     <App />
   </Fragment>
   </React.StrictMode>,
