@@ -22,7 +22,7 @@ function App({ headline, showLogo, backgroundImage }) {
 }
 
 App.propTypes = {
-  headline: PropTypes.string,
+  headline: 'I am a cool world',
   showLogo: PropTypes.bool,
   backgroundImage: PropTypes.string,
 }
