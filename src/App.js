@@ -7,7 +7,7 @@ import {ReactComponent as ReactLogo} from './react-logo.svg'
 
 function App({ headline, showLogo, backgroundImage }) {
   return (
-    <div className="App page" style={{ backgroundImage: `url('${backgroundImage}')` }}>
+    <div className="App" style={{ backgroundImage: `url('${backgroundImage}')` }}>
       {showLogo && (
         <Logos logoOne={<MakeLogo />} logoTwo={<ReactLogo />} />
       )}

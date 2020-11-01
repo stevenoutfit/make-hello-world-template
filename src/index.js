@@ -7,8 +7,7 @@ ReactDOM.render(
   <React.StrictMode>
   <Fragment>
     <App {...window.templateProps} />
-    <App {...window.templateProps} />
-    <App {...window.templateProps} />
+    <App />
   </Fragment>
   </React.StrictMode>,
   document.getElementById('root')
